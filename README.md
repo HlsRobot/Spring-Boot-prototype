@@ -1,2 +1,2 @@
-# springbootprototype
+# Spring-Boot prototype
 Example
