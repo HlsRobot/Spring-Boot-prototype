@@ -1,12 +1,17 @@
 package com.pwc.springbootprototype.company;
 
 import com.pwc.springbootprototype.employee.Employee;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Collections;
 import java.util.List;
 
 @Entity
 @Table(name = "company")
+@Getter
+@Setter
 public class Company {
 
     @Id
@@ -36,7 +41,15 @@ public class Company {
         return this.name;
     }
 
+    public void setName(final String name) {
+        this.name = name;
+    }
+
     public List<Employee> getEmployeeList() {
         return this.employeeList;
+    }
+
+    public void setEmployeeList(final List<Employee> employeeList) {
+        this.employeeList = employeeList != null ? Collections.unmodifiableList(employeeList) : Collections.emptyList();
     }
 }

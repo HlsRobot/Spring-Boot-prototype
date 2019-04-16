@@ -20,6 +20,8 @@ public class EmployeeDto {
         this.salary = salary;
     }
 
+    public static Builder builder() { return new Builder(); }
+
     public EmployeeDto() {
     }
 

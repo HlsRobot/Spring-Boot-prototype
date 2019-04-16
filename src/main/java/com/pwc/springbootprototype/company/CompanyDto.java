@@ -2,12 +2,14 @@ package com.pwc.springbootprototype.company;
 
 import com.pwc.springbootprototype.employee.EmployeeDto;
 
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 public class CompanyDto {
 
     private Long id;
 
+    @NotBlank(message = "violation.required")
     private String name;
 
     private List<EmployeeDto> employeeDtoList;

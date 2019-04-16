@@ -1,7 +1,5 @@
 package com.pwc.springbootprototype.employee;
 
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-public class EmployeeException {
+public class EmployeeException extends Exception{
+    public EmployeeException(final String message) { super(message); }
 }
